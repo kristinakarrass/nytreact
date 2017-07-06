@@ -29,7 +29,7 @@ module.exports = (
     <Route path="/" component={Main}>
 
       {/*if user selects Search or Saved, show the appropriate component */}
-      <Route path="/search" component={Saved} />
+      <Route path="/search" component={Search} />
       <Route path="/saved" component={Saved} />
 
       {/* if user selects any other path ... we get the Main component*/}
