@@ -13,16 +13,20 @@ var Main = React.createClass({
 	//render the function
 	render: function() {
 		return (
-           <div className="page-header center">
-              <h1>New York Times Article Scrubber</h1>
-              <h2>Search for and annotate articles of interest!</h2>
-           </div>
-           <div className="container">
-              <Search {this.state.search} />
-              <Saved {this.state.saved} />
-           </div>
+       <div className="jumbotron">
+         <h1>New York Times Articles Scrubber</h1>
+         <p>Search for and annotate articles of interest!</p>
+         <p>
+            <a class="btn btn-danger btn-lg" href="#" role="button">SEARCH FOR ARTICLES</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">SEE YOUR SAVED ARTICLES</a>
+         </p>
+       </div>
+       <div className="container">
+          <Search {this.state.search} />
+          <Saved {this.state.saved} />
+       </div>
 	    )
 	}
 
 
-})
+});
