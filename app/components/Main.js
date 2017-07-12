@@ -13,17 +13,20 @@ var Main = React.createClass({
 	//render the function
 	render: function() {
 		return (
+      <div className="container">
        <div className="jumbotron">
          <h1>New York Times Articles Scrubber</h1>
          <p>Search for and annotate articles of interest!</p>
          <p>
-            <a class="btn btn-danger btn-lg" href="#" role="button">SEARCH FOR ARTICLES</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">SEE YOUR SAVED ARTICLES</a>
+            <Link to="/search"><button className="btn btn-default btn-lg">SEARCH FOR ARTICLES</button></Link>
+            <Link to="/results"><button className="btn btn-danger btn-lg">SEE SEARCH RESULTS</button></Link>
+            <Link to="/saved"><button className="btn btn-primary btn-lg">SEE YOUR SAVED ARTICLES</button></Link>
          </p>
        </div>
        <div className="container">
-          <Search {this.state.search} />
-          <Saved {this.state.saved} />
+        {/*here we make sure the component selected by the user is rendered - default component is the Search component*/}
+          {this.props.children}
+       </div>
        </div>
 	    )
 	}

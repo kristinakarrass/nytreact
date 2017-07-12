@@ -30,10 +30,11 @@ module.exports = (
 
       {/*if user selects Search or Saved, show the appropriate component */}
       <Route path="/search" component={Search} />
+      <Route path="/results" component={Results} />
       <Route path="/saved" component={Saved} />
 
-      {/* if user selects any other path ... we get the Main component*/}
-      <Route component={Main} />
+      {/* if user selects any other path ... we get the Search component*/}
+      <IndexRoute component={Search} />
     </Route>
    </Router>
 );
